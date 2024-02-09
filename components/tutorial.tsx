@@ -3,6 +3,7 @@
 import { CheckIfHittingEndPoint } from "@/actions/fileUpload";
 import React, { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
+import { Button } from "./ui/button";
 
 const Tutorial = () => {
   const [preview, setPreview] = useState<string | ArrayBuffer | null>(null);
@@ -55,9 +56,9 @@ const Tutorial = () => {
           <p>Drag 'n' drop some files here, or click to select files</p>
         )}
       </div>
-      <button type="submit" onClick={handleSubmit}>
+      <Button type="submit" onClick={handleSubmit}>
         Submit
-      </button>
+      </Button>
     </form>
   );
 };
